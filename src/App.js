@@ -26,7 +26,7 @@ class App extends Component {
 
         const newItem = {
             id: this.state.id,
-            item: this.state.item
+            title: this.state.item
         }
     
         console.log(newItem)
@@ -45,7 +45,6 @@ class App extends Component {
   
   render() {
 
-   
     return (
         <div className="container">
         <div className="row">
@@ -55,11 +54,11 @@ class App extends Component {
         Todo Input 
         </h1>
             <TodoInput 
-            item={this.state.item}
+             item={this.state.item}
              handleChange={this.handleChange}
              handleSubmit= {this.handleSubmit}
              />
-            <TodoList/>
+            <TodoList items= {this.state.items}/>
 
         </div>
         </div>
