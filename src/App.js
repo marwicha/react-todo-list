@@ -10,6 +10,7 @@ class App extends Component {
   render() {
     return (
         <div>
+        <h1> todo Input</h1>
             <TodoInput/>
             <TodoList/>
         </div>
