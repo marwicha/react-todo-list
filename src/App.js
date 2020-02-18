@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div>
-      This is My TODO - List 
-    </div>
-  );
+import TodoList from './components/TodoList'
+import TodoInput from './components/TodoInput'
+
+class App extends Component {
+  render() {
+    return (
+        <div>
+            <TodoInput/>
+            <TodoList/>
+        </div>
+    )
+}
 }
 
 export default App;
