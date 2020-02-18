@@ -3,7 +3,7 @@ import TodoItem from './TodoItem'
 
 export default class TodoList extends Component {
     render() {
-        const {items} = this.props
+        const {items, handleDeleteAll} = this.props
         return (
             <ul className="list-group my-5">
 
@@ -19,6 +19,7 @@ return  (
             
             
             <button type="button"
+             onClick={handleDeleteAll}
              className="btn btn-danger btn-block 
              text-capitalize mt-5">
              

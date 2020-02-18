@@ -28,8 +28,6 @@ class App extends Component {
             id: this.state.id,
             title: this.state.item
         }
-    
-        console.log(newItem)
 
         const updatedItems= [...this.state.items, newItem]
         
@@ -42,6 +40,11 @@ class App extends Component {
         });
     }
 
+    handleDeleteAll = () => {
+        this.setState({
+            items: []
+        })
+    }
   
   render() {
 
@@ -58,7 +61,11 @@ class App extends Component {
              handleChange={this.handleChange}
              handleSubmit= {this.handleSubmit}
              />
-            <TodoList items= {this.state.items}/>
+
+            <TodoList 
+            items= {this.state.items}
+            handleDeleteAll={this.handleDeleteAll}
+            />
 
         </div>
         </div>
