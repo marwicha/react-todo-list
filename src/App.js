@@ -56,7 +56,12 @@ class App extends Component {
 
         const selectedItem = this.state.items.find(item => item.id === id)
 
-        this.setState({items: filteredItems, item: selectedItem.title})
+        this.setState({
+            items: filteredItems, 
+            item: selectedItem.title,
+            editedItem: true,
+            id: id
+            })
     }
 
   render() {
@@ -73,6 +78,7 @@ class App extends Component {
              item={this.state.item}
              handleChange={this.handleChange}
              handleSubmit= {this.handleSubmit}
+             editedItem= {this.state.editedItem}
              />
 
             <TodoList 
