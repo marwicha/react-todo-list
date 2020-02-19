@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 export default class TodoItem extends Component {
     render() {
-        const {title, handleDelete} = this.props
+        const {title, handleDelete, handleEdit} = this.props
         return (
            <li className="list-group-item 
            text-capitalize 
@@ -14,7 +14,7 @@ export default class TodoItem extends Component {
 
            <div className="todo-icon">
            <span className="mx-2 text-success"
-           
+           onClick={handleEdit}
            >
            <i className="fas fa-pen"></i>
           

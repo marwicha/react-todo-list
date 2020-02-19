@@ -3,7 +3,7 @@ import TodoItem from './TodoItem'
 
 export default class TodoList extends Component {
     render() {
-        const {items, handleDeleteAll, handleDelete} = this.props
+        const {items, handleDeleteAll, handleDelete, handleEdit} = this.props
         return (
             <ul className="list-group my-5">
 
@@ -15,7 +15,9 @@ export default class TodoList extends Component {
 return  (
     <TodoItem key={index} title={item.title}
      // i need to do this way so we dont update during state transition
-     handleDelete = { () => handleDelete(item.id)}/>
+     handleDelete = { () => handleDelete(item.id)}
+     handleEdit= {() => handleEdit(item.id)}
+     />
 )
              } ) }
             
