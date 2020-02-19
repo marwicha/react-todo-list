@@ -11,9 +11,9 @@ export default class TodoList extends Component {
             Todo List
             </h3> 
 
-            {items.map(item => {
+            {items.map((item, index) => {
 return  (
-    <TodoItem key={item.id} title={item.title}
+    <TodoItem key={index} title={item.title}
      // i need to do this way so we dont update during state transition
      handleDelete = { () => handleDelete(item.id)}/>
 )
